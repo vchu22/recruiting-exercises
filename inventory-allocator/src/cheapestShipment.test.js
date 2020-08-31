@@ -41,3 +41,30 @@ test("Multiple order can be shipped using multiple warehouses", () => {
   const answer = [{ dm: { banana: 5 } }, { owd: { apple: 5, orange: 5 } }];
   expect(cheapestShipment(order, warehouses)).toEqual(answer);
 });
+
+test("Empty order cannot be shipped", () => {
+  const order = {};
+  const warehouses = [
+    { name: "owd", inventory: { apple: 5, orange: 10 } },
+    { name: "dm", inventory: { banana: 5, orange: 10 } },
+  ];
+  const answer = [];
+  expect(cheapestShipment(order, warehouses)).toEqual(answer);
+});
+
+test("Order cannot be shipped if there's no warehouses", () => {
+  const order = { apple: 5, banana: 5, orange: 5 };
+  const warehouses = [];
+  const answer = [];
+  expect(cheapestShipment(order, warehouses)).toEqual(answer);
+});
+
+test("Order cannot be shipped if no warehouses contains the items needed", () => {
+  const order = { apple: 5, banana: 5, orange: 5 };
+  const warehouses = [
+    { name: "owd", inventory: { grape: 10 } },
+    { name: "dm", inventory: { papaya: 10 } },
+  ];
+  const answer = [];
+  expect(cheapestShipment(order, warehouses)).toEqual(answer);
+});
