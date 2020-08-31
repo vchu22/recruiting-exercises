@@ -50,6 +50,11 @@ We'll evaluate your code via the following guidelines in no particular order:
 3. **Test Code Quality**: Is the test code comperehensive and covering all cases.
 4. **Tool/Language mastery**: is the code using up to date syntax and techniques.
 
+## Tech stack
+
+- Javascript/Node.js
+- Jest (Testing library)
+
 ## How to run it
 
 To run the test, make sure you navigated into this folder in the terminal and then type in `npm test`. It will show how many tests passed and how many tests failed.
