@@ -57,4 +57,4 @@ We'll evaluate your code via the following guidelines in no particular order:
 
 ## How to run it
 
-To run the test, make sure you navigated into this folder in the terminal and then type in `npm test`. It will show how many tests passed and how many tests failed.
+To run the test, make sure you navigated into this folder in the terminal and ran `npm i` to install all the dependencies, and then type in `npm test`. It will show how many tests passed and how many tests failed.
